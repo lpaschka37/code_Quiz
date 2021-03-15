@@ -85,7 +85,7 @@ var questions = [
 
 // define a variable to represent the current question
 var currentQuestion = 0;
-var secondsLeft = 120;
+var secondsLeft = 100;
 var time;
 var score = 0;
 var initials = "";
@@ -168,7 +168,7 @@ function response() {
     else if (response === questions[currentQuestion].correctAnswer) {
         // document.getElementById("#result1").style.color = "green";
         $('#result').html('CORRECT!');
-        $('#result').fadeOut(2800, function () {
+        $('#result').fadeOut(1000, function () {
             $(this).html('').show();
         });
         currentQuestion += 1;
@@ -177,14 +177,14 @@ function response() {
     else {
         // document.getElementById("#result2").style.color = "red";
         $('#result').html('INCORRECT!');
-        $('#result').fadeOut(2800, function () {
+        $('#result').fadeOut(1000, function () {
             $(this).html('').show();
         });
-        if (secondsLeft < 5) {
+        if (secondsLeft < 10) {
             secondsLeft = 0;
             gameOver();
         }
-        secondsLeft -= 5;
+        secondsLeft -= 10;
         currentQuestion += 1;
         loadQuestions();
     }
@@ -219,7 +219,8 @@ function gameOver() {
             submitHighscore();
         });
     } else {
-        $('#endText').html("Whoops! Try Again!");
+        $('#endTextFail').html("Whoops! Try Again!");
+        $('#endText').addClass('hidden');
         $('#submit').addClass('hidden');
         $('.initials').addClass('hidden');
         $('#highscoresBtn').removeClass('hidden');
