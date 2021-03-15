@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coding Quiz</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <link rel="stylesheet" href="./assets/style.css">
+    </head>
+    <header>
+        <button id="highscoresBtn">View Highscores</button>
+        <h5 id="timerDisplay">Timer: <span id="time"></span></h5>
+    </header>
+
+    <body>
+        <main>
+            <section class="container">
+                <div class="startQuiz">
+                    <h1>Java Script Code Challenge</h1>
+                    <p class="subText">This quiz will test your kowledge on Javascript after learning via firehose :) </p>
+                    <button id="startBtn">Start Quiz</button>
+                </div>
+
+                <div class="questionContainer resultCont">
+                    <h4 id="question"></h4>
+                    <p id="result"></p>  
+                    <ol type="a" class="answers">
+                        <li><button id="a"></button></li>
+                        <li><button id="b"></button></li>
+                        <li><button id="c"></button></li>
+                        <li><button id="d"></button></li>
+                    </ol>                               
+                </div>
+                
+                <div class="gameOver">
+                    <h3 id="endText"></h3>
+                    <p id="endSubText" class="subText"></p>
+                    <p class="score">Score: <span id="score"></span></p>
+                    <p class="initials">Initials: <input style="border-radius: 8px;" id="initials" type="text"></p>
+                    <button id="submit">Submit Score</button>
+                    <button id="restartBtn">Restart Quiz</button>
+                </div>
+
+                <div class="highscores">
+                    <h2>Highscores</h2>
+                    <p style="font-size: medium;">Current List: <span id="recordCountSpan"></span></p>
+                    <ul class="highscore">
+                        <li><span id="scoreDisplay"></span></li>  
+                        <li><span id="initialsDisplay"></span></li>
+                    </ul>
+                    <button id="back">Back</button>
+                </div>
+            </section>
+        </main>    
+        <script src="./assets/script.js"></script>
+    </body>
+
+</html>
