@@ -46,6 +46,16 @@ ol li {
     font-size: 16px;
 }
 
+#result {
+    text-align: right;
+    margin-top: 5px;
+    color: white;
+    font-weight: bold;
+    width: 20%;
+    color: #ffff00;
+    display: inline-block;
+}
+
 .container {
     display: flex;
     background-color: #7a90b9;
@@ -67,16 +77,6 @@ ol li {
 .gameOver {
     width: 100%;
     padding: 20px;
-}
-
-#result {
-    text-align: right;
-    margin-top: 5px;
-    color: white;
-    font-weight: bold;
-    width: 20%;
-    color: #ffff00;
-    display: inline-block;
 }
 
 .highscores {

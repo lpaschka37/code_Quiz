@@ -208,6 +208,7 @@ function gameOver() {
         $('#initals').text("");
         $('#endText').html("HOORAY! APPLAUSE ALL AROUND!");
         $('#endSubText').html("The quiz is over. You made it! Enter your initials and click submit score button to record your Score.");
+        $('#endSubText2').addClass('hidden');
         $('#submit').click(function () {
             initials = $('#initials').val();
 
@@ -220,6 +221,8 @@ function gameOver() {
         });
     } else {
         $('#endTextFail').html("Whoops! Try Again!");
+        $('#endSubText2').html("Dont worry this stuff is hard, tey again!");
+        $('#endSubText').addClass('hidden');
         $('#endText').addClass('hidden');
         $('#submit').addClass('hidden');
         $('.initials').addClass('hidden');
@@ -238,7 +241,7 @@ function theEnd() {
     $('.gameOver').removeClass('hidden');
 }
 
-// retreive highscores for display
+// get highscores
 function getHighscores(){    
     highScoresView();
     var getScore = localStorage.getItem("score", score);
